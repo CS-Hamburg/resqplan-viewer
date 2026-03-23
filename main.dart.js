@@ -25392,8 +25392,8 @@ _.r=d},
 iP:function iP(a,b,c){this.c=a
 this.a=b
 this.b=c},
-aFi(a){var s,r,q,p,o,n,m,l,k,j,i=a.h(0,"id"),h=a.h(0,"hostname")
-if(h==null)h=""
+aFi(a){var s,r,q,p,o,n,m,l,k,j,i=a.h(0,"id"),h=a.h(0,"matrixId"),g=a.h(0,"hostname")
+if(g==null)g=""
 s=B.b.nU(B.Ih,new A.XD(a),new A.XE())
 r=a.h(0,"screenSize")
 q=a.h(0,"screenOrientation")
@@ -25406,8 +25406,8 @@ m=a.h(0,"type")==null?B.iD:B.b.nU(B.Gc,new A.XH(a),new A.XI())
 l=A.a91(a.h(0,"relativePosition"))
 k=A.dG(a.h(0,"rotation"))
 j=a.h(0,"label")
-return new A.hT(i,h,s,r,q,p,o,n,m,l,k,j==null?"":j)},
-hT:function hT(a,b,c,d,e,f,g,h,i,j,k,l){var _=this
+return new A.hT(i,h,g,s,r,q,p,o,n,m,l,k,j==null?"":j)},
+hT:function hT(a,b,c,d,e,f,g,h,i,j,k,l,m){var _=this
 _.a=a
 _.b=b
 _.c=c
@@ -25419,7 +25419,8 @@ _.w=h
 _.x=i
 _.y=j
 _.z=k
-_.Q=l},
+_.Q=l
+_.as=m},
 XD:function XD(a){this.a=a},
 XE:function XE(){},
 XF:function XF(a){this.a=a},
@@ -25428,15 +25429,16 @@ XH:function XH(a){this.a=a},
 XI:function XI(){},
 dk:function dk(a,b){this.a=a
 this.b=b},
-aHh(a){var s=a.h(0,"id"),r=B.b.nU(B.GC,new A.a1p(a),new A.a1q()),q=a.h(0,"label")
-if(q==null)q=""
-return new A.i4(s,r,q,A.a91(a.h(0,"relativePosition")),A.dG(a.h(0,"rotation")))},
-i4:function i4(a,b,c,d,e){var _=this
+aHh(a){var s=a.h(0,"id"),r=a.h(0,"matrixId"),q=B.b.nU(B.GC,new A.a1p(a),new A.a1q()),p=a.h(0,"label")
+if(p==null)p=""
+return new A.i4(s,r,q,p,A.a91(a.h(0,"relativePosition")),A.dG(a.h(0,"rotation")))},
+i4:function i4(a,b,c,d,e,f){var _=this
 _.a=a
 _.b=b
 _.c=c
 _.d=d
-_.e=e},
+_.e=e
+_.f=f},
 a1p:function a1p(a){this.a=a},
 a1q:function a1q(){},
 aHi(a){var s,r,q=J.fb(t.j.a(a.h(0,"points")),new A.a1t(),t.IQ),p=A.a0(q,q.$ti.i("ac.E"))
@@ -84419,7 +84421,7 @@ A.iP.prototype={
 G(){return"ApollonType."+this.b}}
 A.hT.prototype={
 ea(){var s=this
-return A.ae(["id",s.a,"hostname",s.b,"resolution",B.b.gaf(s.c.G().split(".")),"screenSize",s.d,"screenOrientation",s.e,"serialPort",s.f,"serialType",B.b.gaf(s.r.G().split(".")),"overrideChannel",s.w,"type",B.b.gaf(s.x.G().split(".")),"position",s.y.ea(),"rotation",s.z,"label",s.Q],t.N,t.z)}}
+return A.ae(["id",s.a,"matrixId",s.b,"hostname",s.c,"resolution",B.b.gaf(s.d.G().split(".")),"screenSize",s.e,"screenOrientation",s.f,"serialPort",s.r,"serialType",B.b.gaf(s.w.G().split(".")),"overrideChannel",s.x,"type",B.b.gaf(s.y.G().split(".")),"position",s.z.ea(),"rotation",s.Q,"label",s.as],t.N,t.z)}}
 A.XD.prototype={
 $1(a){return a.G()===B.c.T("Resolution.",this.a.h(0,"resolution"))},
 $S:532}
@@ -84441,7 +84443,7 @@ $S:537}
 A.dk.prototype={}
 A.i4.prototype={
 ea(){var s=this
-return A.ae(["id",s.a,"type",B.b.gaf(s.b.G().split(".")),"label",s.c,"relativePosition",s.d.ea(),"rotation",s.e],t.N,t.z)}}
+return A.ae(["id",s.a,"matrixId",s.b,"type",B.b.gaf(s.c.G().split(".")),"label",s.d,"relativePosition",s.e.ea(),"rotation",s.f],t.N,t.z)}}
 A.a1p.prototype={
 $1(a){return a.G()===B.c.T("FiredetectorType.",this.a.h(0,"type"))},
 $S:538}
@@ -84740,19 +84742,19 @@ vy(a){this.a2(new A.XC(this,a))},
 mT(a){this.a2(new A.XB(this,a))},
 Yz(){var s,r=this,q=null,p=r.e
 if(p!=null&&p.length!==0){if(B.c.bq(p,"RESQ_"))return A.JG(q,q,new A.k0(new A.aX(B.o0,new A.Xy(r),t.Oo).gY(0).c),q)
-if(r.a.c.x===B.fn)return B.nL}s=r.a.c.x
+if(r.a.c.y===B.fn)return B.nL}s=r.a.c.y
 if(s===B.fn&&p.length!==0)return B.nL
 p.toString
 if(B.c.bq(p,"RESQ_"))return A.JG(q,q,new A.k0(new A.aX(B.o0,new A.Xz(r),t.Oo).gY(0).c),q)
 return A.JG(q,q,new A.k0(s.c),q)},
-L(a){var s=this,r=null,q=s.x,p=s.y,o=A.a7g(0.017453292519943295*s.a.c.z),n=s.d?new A.ej(r,r,A.avN(B.bw,2),r,A.c([new A.dj(5,B.d7,A.ag(B.d.aK(127.5),B.bw.v()>>>16&255,B.bw.v()>>>8&255,B.bw.v()&255),B.ue,10)],t.sq),r,B.be):B.lZ,m=s.a.c
-return A.ij(r,A.asS(!1,!0,A.ub(B.W,A.nQ(A.atE(new A.bo(40,40,A.awP(s.Yz()),r),!0,s.r,m.x.b.toUpperCase()+" : "+m.a+" : "+m.Q,B.zm),B.B,n,r,r,r,r),r,o,!0),r,!0,r,r,r,r,r,r,new A.Xx(s),r,r,r),r,r,q,r,p,r)}}
+L(a){var s=this,r=null,q=s.x,p=s.y,o=A.a7g(0.017453292519943295*s.a.c.Q),n=s.d?new A.ej(r,r,A.avN(B.bw,2),r,A.c([new A.dj(5,B.d7,A.ag(B.d.aK(127.5),B.bw.v()>>>16&255,B.bw.v()>>>8&255,B.bw.v()&255),B.ue,10)],t.sq),r,B.be):B.lZ,m=s.a.c
+return A.ij(r,A.asS(!1,!0,A.ub(B.W,A.nQ(A.atE(new A.bo(40,40,A.awP(s.Yz()),r),!0,s.r,m.y.b.toUpperCase()+" : "+m.a+" : "+m.as,B.zm),B.B,n,r,r,r,r),r,o,!0),r,!0,r,r,r,r,r,r,new A.Xx(s),r,r,r),r,r,q,r,p,r)}}
 A.XA.prototype={
 $1(a){var s=this.a
 s.vy(s.a.f)},
 $S:5}
 A.XC.prototype={
-$0(){var s=this.a,r=s.a.c.y,q=this.b
+$0(){var s=this.a,r=s.a.c.z,q=this.b
 s.x=r.a*q-20
 s.y=r.b*q-20},
 $S:0}
@@ -84777,14 +84779,14 @@ az(){this.aL()
 $.W.k4$.push(new A.a_9(this))},
 vy(a){this.a2(new A.a_b(this,a))},
 mT(a){this.a2(new A.a_a(this,a))},
-L(a){var s=this,r=null,q=s.w,p=s.x,o=A.a7g(0.017453292519943295*s.a.c.e),n=s.d?new A.ej(r,r,A.avN(B.bw,2),r,A.c([new A.dj(5,B.d7,A.ag(B.d.aK(127.5),B.bw.v()>>>16&255,B.bw.v()>>>8&255,B.bw.v()&255),B.ue,10)],t.sq),r,B.be):B.lZ,m=s.a.c,l=m.b
-return A.ij(r,A.asS(!1,!0,A.ub(B.W,A.nQ(A.atE(new A.bo(40,40,A.awP(A.JG(r,r,new A.k0(l.c),r)),r),!0,s.f,l.b.toUpperCase()+" : "+m.a+" : "+m.c,B.zm),B.B,n,r,r,r,r),r,o,!0),r,!0,r,r,r,r,r,r,new A.a_8(s),r,r,r),r,r,q,r,p,r)}}
+L(a){var s=this,r=null,q=s.w,p=s.x,o=A.a7g(0.017453292519943295*s.a.c.f),n=s.d?new A.ej(r,r,A.avN(B.bw,2),r,A.c([new A.dj(5,B.d7,A.ag(B.d.aK(127.5),B.bw.v()>>>16&255,B.bw.v()>>>8&255,B.bw.v()&255),B.ue,10)],t.sq),r,B.be):B.lZ,m=s.a.c,l=m.c
+return A.ij(r,A.asS(!1,!0,A.ub(B.W,A.nQ(A.atE(new A.bo(40,40,A.awP(A.JG(r,r,new A.k0(l.c),r)),r),!0,s.f,l.b.toUpperCase()+" : "+m.a+" : "+m.d,B.zm),B.B,n,r,r,r,r),r,o,!0),r,!0,r,r,r,r,r,r,new A.a_8(s),r,r,r),r,r,q,r,p,r)}}
 A.a_9.prototype={
 $1(a){var s=this.a
 s.vy(s.a.e)},
 $S:5}
 A.a_b.prototype={
-$0(){var s=this.a,r=s.a.c.d,q=this.b
+$0(){var s=this.a,r=s.a.c.e,q=this.b
 s.w=r.a*q-20
 s.x=r.b*q-20},
 $S:0}
@@ -85057,14 +85059,14 @@ p=k.dx
 o=k.dy
 r.push(A.ij(j,A.ju(B.bn,k.k2,B.O,B.bK),o,j,q.a,j,q.b,p))}r=A.xR(j,A.fp(A.ju(B.bn,r,B.O,B.bK),B.ap,j,j,j,j,j),B.aE,!1,j,j,j,j,j,j,j,j,j,j,k.ga9S(),k.ga9U(),j,j,j,j,j,j,j,j,j,j,j)
 q=k.CW
-q=q!=null&&k.ay!=null&&k.ch!=null?A.ij(j,A.nQ(A.k6(A.c([A.dE(A.c([new A.bo(80,j,A.bM("Id: ",j,j,j,j,j,j),j),A.bM(""+q.a,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(80,j,A.bM("Label: ",j,j,j,j,j,j),j),A.bM(k.CW.c,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(80,j,A.bM("Type: ",j,j,j,j,j,j),j),A.bM(k.CW.b.b,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10)],s),B.I,B.R,B.a_,5),B.B,B.m_,j,j,B.jk,350),j,j,j,10,80,j):new A.bo(j,j,j,j)
+q=q!=null&&k.ay!=null&&k.ch!=null?A.ij(j,A.nQ(A.k6(A.c([A.dE(A.c([new A.bo(80,j,A.bM("Id: ",j,j,j,j,j,j),j),A.bM(""+q.a,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(80,j,A.bM("Label: ",j,j,j,j,j,j),j),A.bM(k.CW.d,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(80,j,A.bM("Type: ",j,j,j,j,j,j),j),A.bM(k.CW.c.b,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10)],s),B.I,B.R,B.a_,5),B.B,B.m_,j,j,B.jk,350),j,j,j,10,80,j):new A.bo(j,j,j,j)
 p=k.cy
 if(p!=null&&k.ay!=null&&k.ch!=null){p=A.dE(A.c([new A.bo(80,j,A.bM("Id: ",j,j,j,j,j,j),j),A.bM(""+p.a,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10)
-o=A.dE(A.c([new A.bo(80,j,A.bM("Label: ",j,j,j,j,j,j),j),A.bM(k.cy.Q,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10)
-n=A.dE(A.c([new A.bo(80,j,A.bM("Hostname: ",j,j,j,j,j,j),j),A.bM(k.cy.b,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10)
-m=A.dE(A.c([new A.bo(80,j,A.bM("Type: ",j,j,j,j,j,j),j),A.bM(k.cy.x.b,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10)
+o=A.dE(A.c([new A.bo(80,j,A.bM("Label: ",j,j,j,j,j,j),j),A.bM(k.cy.as,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10)
+n=A.dE(A.c([new A.bo(80,j,A.bM("Hostname: ",j,j,j,j,j,j),j),A.bM(k.cy.c,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10)
+m=A.dE(A.c([new A.bo(80,j,A.bM("Type: ",j,j,j,j,j,j),j),A.bM(k.cy.y.b,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10)
 l=k.cy
-p=A.ij(j,A.nQ(A.k6(A.c([p,o,n,m,l.x===B.fn?A.k6(A.c([new A.Iv(10,5,0,0,B.l,j),A.dE(A.c([new A.bo(120,j,A.bM("default Channel: ",j,j,j,j,j,j),j),A.bM(l.w,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(120,j,A.bM("Aufl\xf6sung: ",j,j,j,j,j,j),j),A.bM(k.cy.c.b,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(120,j,A.bM("Bildschirmgr\xf6\xdfe: ",j,j,j,j,j,j),j),A.bM(""+k.cy.d,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(120,j,A.bM("SerialPort: ",j,j,j,j,j,j),j),A.bM(k.cy.f,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(120,j,A.bM("MonitorTyp: ",j,j,j,j,j,j),j),A.bM(k.cy.r.b,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(120,j,A.bM("Ausrichtung: ",j,j,j,j,j,j),j),A.ub(B.W,B.P0,j,A.a7g(0.017453292519943295*k.cy.e),!0)],s),B.I,B.R,B.a_,10)],s),B.I,B.R,B.a_,5):new A.bo(j,j,j,j)],s),B.I,B.R,B.a_,5),B.B,B.m_,j,j,B.jk,350),j,j,j,10,80,j)}else p=new A.bo(j,j,j,j)
+p=A.ij(j,A.nQ(A.k6(A.c([p,o,n,m,l.y===B.fn?A.k6(A.c([new A.Iv(10,5,0,0,B.l,j),A.dE(A.c([new A.bo(120,j,A.bM("default Channel: ",j,j,j,j,j,j),j),A.bM(l.x,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(120,j,A.bM("Aufl\xf6sung: ",j,j,j,j,j,j),j),A.bM(k.cy.d.b,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(120,j,A.bM("Bildschirmgr\xf6\xdfe: ",j,j,j,j,j,j),j),A.bM(""+k.cy.e,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(120,j,A.bM("SerialPort: ",j,j,j,j,j,j),j),A.bM(k.cy.r,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(120,j,A.bM("MonitorTyp: ",j,j,j,j,j,j),j),A.bM(k.cy.w.b,j,j,j,j,j,j)],s),B.I,B.R,B.a_,10),A.dE(A.c([new A.bo(120,j,A.bM("Ausrichtung: ",j,j,j,j,j,j),j),A.ub(B.W,B.P0,j,A.a7g(0.017453292519943295*k.cy.f),!0)],s),B.I,B.R,B.a_,10)],s),B.I,B.R,B.a_,5):new A.bo(j,j,j,j)],s),B.I,B.R,B.a_,5),B.B,B.m_,j,j,B.jk,350),j,j,j,10,80,j)}else p=new A.bo(j,j,j,j)
 return A.k6(A.c([new A.bY(B.jl,new A.zX(new A.an3(k),new A.an4(k),j),j),new A.bo(h,i-132,A.ju(B.bn,A.c([r,q,p,k.ch!=null?A.ij(j,new A.BA(new A.an5(k),new A.an6(k),new A.an7(k),new A.an8(k),k.z,0.5,3,j),j,j,10,j,10,j):new A.bo(j,j,j,j)],s),B.O,B.bK),j)],s),B.I,B.R,B.a_,0)},
 ah3(a){var s,r
 for(s=this.k3,s=new A.cD(s,A.m(s).i("cD<1,2>")).ga0(0);s.u();){r=s.d.a.gK()
@@ -85155,7 +85157,9 @@ $0(){var s=this.a
 s.ay=this.b
 s.ch=null
 B.b.U(s.id)
-B.b.U(s.k2)},
+s.k1.U(0)
+B.b.U(s.k2)
+s.k3.U(0)},
 $S:0}
 A.an4.prototype={
 $1(a){var s=this.a
